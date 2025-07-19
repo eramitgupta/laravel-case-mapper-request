@@ -56,7 +56,7 @@ use LaravelCaseMapperRequest\Attributes\MapName;
 use LaravelCaseMapperRequest\Traits\HasMapNameTransformers;
 use LaravelCaseMapperRequest\Mappers\SnakeCaseMapper;
 
-#[MapName(SnakeCaseMapper::class)] // or CamelCaseMapper, UpperCaseMapper, SnakeCaseMapper, StudlyCaseMapper etc.
+#[MapName(SnakeCaseMapper::class)] // or CamelCaseMapper, UpperCaseMapper, StudlyCaseMapper etc.
 class ContactRequest extends FormRequest
 {
     use HasMapNameTransformers;
