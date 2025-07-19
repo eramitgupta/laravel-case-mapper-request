@@ -1,0 +1,34 @@
+name: 💬 Question / Help
+description: Ask a usage question or seek support
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Stuck somewhere? We’ll try to help. Be sure to check the README and examples first.
+
+  - type: input
+    id: package-version
+    attributes:
+      label: Package Version
+      placeholder: v1.0.0
+    validations:
+      required: false
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you want to ask?
+      description: Be as specific as possible.
+      placeholder: I'm trying to use this with X...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / Attempts / Error
+      description: What did you try? What error did you get (if any)?
+    validations:
+      required: false

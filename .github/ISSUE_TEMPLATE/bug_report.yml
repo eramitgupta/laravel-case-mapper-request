@@ -1,0 +1,62 @@
+name: 🐞 Bug Report
+description: Report something that isn't working as expected
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the package! Please provide details below.
+
+  - type: input
+    id: package-version
+    attributes:
+      label: Package Version
+      placeholder: e.g. v1.2.3
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Laravel & PHP Versions
+      placeholder: e.g. Laravel 11, PHP 8.3
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: What happened? What did you expect?
+      placeholder: A clear and concise description...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Describe how to trigger the issue
+      placeholder: |
+        1. Create a FormRequest...
+        2. Use in a controller...
+        3. Send a POST request...
+        4. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: stacktrace
+    attributes:
+      label: Stack Trace or Console Errors
+      render: shell
+      placeholder: Paste error message here
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional Context / Screenshot
+      description: If applicable, add logs or screenshots to help explain the issue.
