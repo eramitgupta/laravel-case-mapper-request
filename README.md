@@ -54,9 +54,9 @@ php artisan make:request ContactRequest
 ```php
 use LaravelCaseMapperRequest\Attributes\MapName;
 use LaravelCaseMapperRequest\Traits\HasMapNameTransformers;
-use LaravelCaseMapperRequest\Mappers\CamelCaseMapper;
+use LaravelCaseMapperRequest\Mappers\SnakeCaseMapper;
 
-#[MapName(CamelCaseMapper::class)] // or SnakeCaseMapper, UpperCaseMapper, etc.
+#[MapName(SnakeCaseMapper::class)] // or CamelCaseMapper, UpperCaseMapper, SnakeCaseMapper, StudlyCaseMapper etc.
 class ContactRequest extends FormRequest
 {
     use HasMapNameTransformers;
