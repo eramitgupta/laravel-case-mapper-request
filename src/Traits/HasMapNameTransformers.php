@@ -25,7 +25,7 @@ trait HasMapNameTransformers
         $attribute = $attributes[0]->newInstance();
         $mapper = $attribute->mapperClass;
 
-        if (!class_exists($mapper) || !method_exists($mapper, 'map')) {
+        if (! class_exists($mapper) || ! method_exists($mapper, 'map')) {
             return $original;
         }
 
@@ -54,6 +54,7 @@ trait HasMapNameTransformers
 
         $remappedErrors = collect($errors)->mapWithKeys(function ($messages, $mappedKey) {
             $originalKey = $this->keyMap[$mappedKey] ?? $mappedKey;
+
             return [$originalKey => $messages];
         })->toArray();
 
