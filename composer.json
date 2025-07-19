@@ -1,0 +1,46 @@
+{
+    "name": "erag/laravel-case-mapper-request",
+    "description": "Seamlessly integrate attribute-based case mapping into Laravel FormRequests — transform keys and remap validation errors effortlessly.",
+    "keywords": [
+        "laravel",
+        "formrequest",
+        "attribute",
+        "case mapping",
+        "snake_case",
+        "camelCase",
+        "uppercase",
+        "input mapper",
+        "request transformer",
+        "validation",
+        "form request",
+        "error remap",
+        "auto map",
+        "api request cleanup",
+        "pascalCase",
+        "kebab-case"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LaravelCaseMapperRequest\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelCaseMapperRequest\\CaseMapperRequestServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "laravel/pint": "^1.13"
+    },
+    "scripts": {
+        "lint": "pint",
+        "lint-test": "pint --test",
+        "lint:dirty": "pint --dirty"
+    }
+}
