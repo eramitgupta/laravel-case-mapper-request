@@ -7,7 +7,7 @@ use Illuminate\Validation\ValidationException;
 use LaravelCaseMapperRequest\Attributes\MapName;
 use ReflectionClass;
 
-trait HasMapNameTransformers
+trait HasKeyTransformers
 {
     protected array $keyMap = [];
 

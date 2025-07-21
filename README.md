@@ -53,13 +53,13 @@ php artisan make:request ContactRequest
 
 ```php
 use LaravelCaseMapperRequest\Attributes\MapName;
-use LaravelCaseMapperRequest\Traits\HasMapNameTransformers;
+use LaravelCaseMapperRequest\Traits\HasKeyTransformers;
 use LaravelCaseMapperRequest\Mappers\SnakeCaseMapper;
 
 #[MapName(SnakeCaseMapper::class)] // or CamelCaseMapper, UpperCaseMapper, StudlyCaseMapper etc.
 class ContactRequest extends FormRequest
 {
-    use HasMapNameTransformers;
+    use HasKeyTransformers;
 
     public function authorize(): bool
     {
